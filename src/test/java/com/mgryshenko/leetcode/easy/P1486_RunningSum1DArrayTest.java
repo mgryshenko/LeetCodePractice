@@ -1,4 +1,4 @@
-package com.mgryshenko.leetcode;
+package com.mgryshenko.leetcode.easy;
 
 import com.mgryshenko.leetcode.easy.P1486_RunningSum1DArray;
 import org.junit.jupiter.api.Test;
