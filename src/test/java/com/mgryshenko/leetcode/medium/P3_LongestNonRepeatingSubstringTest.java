@@ -1,5 +1,6 @@
-package com.mgryshenko.leetcode.easy;
+package com.mgryshenko.leetcode.medium;
 
+import com.mgryshenko.leetcode.medium.P3_LongestNonRepeatingSubstring;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 

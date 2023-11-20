@@ -1,4 +1,4 @@
-package com.mgryshenko.leetcode.easy;
+package com.mgryshenko.leetcode.medium;
 
 
 import java.util.HashMap;
