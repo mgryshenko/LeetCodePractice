@@ -47,26 +47,56 @@ public class P12_IntegerToRoman {
 
     public String intToRoman(int num) {
         char[] romans = {'I','V','X','L','C','D','M'};
+        int ri = 6;
 
-        StringBuilder sb = new StringBuilder();
-        for (int i = 1000, ri = 6; i > 0; i /= 10, ri -= 2) {
-            int digit = num / i;
-            num = num - digit * i;
+        char[] result = new char[15];
+        int size = 0;
+        int denom = 1000;
+        while (denom > 0) {
+            int digit = num / denom;
+            num = num - digit * denom;
 
             switch (digit) {
-                case 1 -> sb.append(romans[ri]);
-                case 2 -> sb.append(romans[ri]).append(romans[ri]);
-                case 3 -> sb.append(romans[ri]).append(romans[ri]).append(romans[ri]);
-                case 4 -> sb.append(romans[ri]).append(romans[ri + 1]);
-                case 5 -> sb.append(romans[ri + 1]);
-                case 6 -> sb.append(romans[ri + 1]).append(romans[ri]);
-                case 7 -> sb.append(romans[ri + 1]).append(romans[ri]).append(romans[ri]);
-                case 8 -> sb.append(romans[ri + 1]).append(romans[ri]).append(romans[ri]).append(romans[ri]);
-                case 9 -> sb.append(romans[ri]).append(romans[ri + 2]);
-                default -> {}
+                case 1 -> result[size++] = romans[ri];
+                case 2 -> {
+                    result[size++] = romans[ri];
+                    result[size++] = romans[ri];
+                }
+                case 3 -> {
+                    result[size++] = romans[ri];
+                    result[size++] = romans[ri];
+                    result[size++] = romans[ri];
+                }
+                case 4 -> {
+                    result[size++] = romans[ri];
+                    result[size++] = romans[ri + 1];
+                }
+                case 5 -> result[size++] = romans[ri + 1];
+                case 6 -> {
+                    result[size++] = romans[ri + 1];
+                    result[size++] = romans[ri];
+                }
+                case 7 -> {
+                    result[size++] = romans[ri + 1];
+                    result[size++] = romans[ri];
+                    result[size++] = romans[ri];
+                }
+                case 8 -> {
+                    result[size++] = romans[ri + 1];
+                    result[size++] = romans[ri];
+                    result[size++] = romans[ri];
+                    result[size++] = romans[ri];
+                }
+                case 9 -> {
+                    result[size++] = romans[ri];
+                    result[size++] = romans[ri + 2];
+                }
             }
+
+            ri -= 2;
+            denom /= 10;
         }
 
-        return sb.toString();
+        return String.valueOf(result, 0, size);
     }
 }
