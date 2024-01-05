@@ -11,8 +11,8 @@ class P5_LongestPalindromeSubstringTest {
 
     @ParameterizedTest
     @CsvSource({
-//            "babad,bab",
-//            "cbbd,bb",
+            "babad,bab",
+            "cbbd,bb",
             "ba,b",
             "bb,bb",
             "abb,bb",
