@@ -1,5 +1,7 @@
 package com.mgryshenko.leetcode.easy;
 
+import com.mgryshenko.leetcode.utils.ListNode;
+
 /**
  * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
  *
@@ -63,13 +65,5 @@ public class P2_AddTwoNumbers {
         prev.next = null;
 
         return first;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 }

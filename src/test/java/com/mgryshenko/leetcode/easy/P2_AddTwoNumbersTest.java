@@ -1,12 +1,13 @@
 package com.mgryshenko.leetcode.easy;
 
-import com.mgryshenko.leetcode.easy.P2_AddTwoNumbers.ListNode;
+import com.mgryshenko.leetcode.utils.ListNode;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static com.mgryshenko.leetcode.utils.ListNode.list;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -38,13 +39,5 @@ class P2_AddTwoNumbersTest {
                 Arguments.of(list(2,4,9), list(5,6,4,9), list(7,0,4,0,1)),
                 Arguments.of(list(9,9,9,9,9,9,9), list(9,9,9,9), list(8,9,9,9,0,0,0,1))
         );
-    }
-
-    private static ListNode list(int... values) {
-        ListNode node = new ListNode(values[values.length - 1]);
-        for (int i = values.length - 2; i >= 0; i--) {
-            node = new ListNode(values[i], node);
-        }
-        return node;
     }
 }

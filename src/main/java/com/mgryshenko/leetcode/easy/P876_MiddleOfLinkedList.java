@@ -1,5 +1,7 @@
 package com.mgryshenko.leetcode.easy;
 
+import com.mgryshenko.leetcode.utils.ListNode;
+
 /**
  * Given the head of a singly linked list, return the middle node of the linked list.
  *
@@ -44,13 +46,5 @@ public class P876_MiddleOfLinkedList {
         }
 
         return midNode;
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
     }
 }
